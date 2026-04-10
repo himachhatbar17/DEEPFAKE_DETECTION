@@ -195,48 +195,6 @@ pip install kaggle
 # Download dataset
 kaggle datasets download -d himachhatbar1700/deepfake
 unzip deepfake.zip -d DEEPFAKE_DATASET/
-```
-
----
-
-## 📁 Project Structure
-
-```
-MSTF-Trans/
-│
-├── 📓 notebooks/
-│   └── deepfake_detection_pipeline.ipynb   ← Main Colab notebook (all cells)
-│
-├── 🧠 models/
-│   ├── sdb.py              ← Spatial-Domain Baseline (EfficientNet-B0)
-│   ├── dsfn.py             ← Dual-Branch Spatio-Frequency Network
-│   ├── mstf_trans.py       ← Proposed MSTF-Trans (full model)
-│   ├── encoders.py         ← FrequencyEncoder, TemporalFlowEncoder
-│   └── fusion.py           ← CrossAttentionFusion, AdaptiveGatedFusion
-│
-├── 📊 data/
-│   ├── dataset.py          ← DeepFakeDataset class (multimodal loader)
-│   └── preprocessing.py    ← FFT cache builder, optical flow extractor
-│
-├── 🏋️ training/
-│   ├── train.py            ← Full training pipeline (train_full)
-│   ├── engine.py           ← train_epoch, evaluate, metrics
-│   ├── losses.py           ← LabelSmoothBCE
-│   └── scheduler.py        ← WarmupCosineScheduler
-│
-├── 📈 evaluation/
-│   ├── metrics.py          ← compute_all_metrics (10 metrics)
-│   └── visualize.py        ← ROC curves, confusion matrices, gate weights
-│
-├── ⚙️ configs/
-│   └── config.py           ← CFG dict (paths, hyperparameters)
-│
-├── 📄 requirements.txt
-├── 📄 README.md
-└── 📄 LICENSE
-```
-
----
 
 ## ⚙️ Installation
 
