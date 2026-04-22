@@ -474,6 +474,4 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **Made for IEEE Research in Multimedia Forensics & Deepfake Detection**
 
-⭐ Star this repo if it helped your research!
-
 </div>
